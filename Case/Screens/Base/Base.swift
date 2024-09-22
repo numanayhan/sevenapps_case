@@ -6,9 +6,10 @@
 //
 
 import UIKit
- 
+import TinyConstraints
+
 class Base: UIViewController {
-    
+    let networkStatus = UserLabel()
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -16,29 +17,30 @@ class Base: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        checkNetworkConnection()
         setupLayout()
+        checkNetworkConnection()
     }
-    
-    // Layout ayarları
+     
     func setupLayout() {
         view.backgroundColor = .black
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
+        networkStatus.text = "İnternet Bağlantısı Yok!"
+        networkStatus.isHidden = true
+        view.addSubview(networkStatus)
+        networkStatus.centerInSuperview()
+        networkStatus.leadingToSuperview(offset: 20)
+        networkStatus.trailingToSuperview(offset: 20)
     }
     
     func checkNetworkConnection(){
-        // İnternet kontrolü yapılıyor
+      
         if NetworkConnection.shared.isConnected() {
-            print("Ağ mevcut, uygulama devam edebilir")
+            networkStatus.isHidden = true
         } else {
-            // İnternet bağlantısı yoksa uyarı banner'ı gösteriliyor
-            showNoInternetBanner()
+            networkStatus.isHidden = false
         }
     }
-    // İnternet yoksa uyarı gösteren fonksiyon
-    func showNoInternetBanner() {
-        
-    }
+     
 }
 
