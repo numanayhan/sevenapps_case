@@ -7,8 +7,8 @@
 import Foundation
 import Alamofire
 
-class UserListVM {
-    private let userRepository: UserRepository
+public class UserListVM {
+    let userRepository: UserRepository
     init(userRepository: UserRepository = UserRepositoryImpl()) {
         self.userRepository = userRepository
     } 

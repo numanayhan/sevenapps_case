@@ -18,7 +18,7 @@ class UserListVMTests: XCTestCase {
         super.setUp()
         mockRepository = MockUserRepository()
         
-        //viewModel = UserListVM(userRepository: nil) // Mock repository'yi inject ediyoruz
+        viewModel = UserListVM(userRepository: mockRepository! as! UserRepository) // Mock repository'yi inject ediyoruz
     }
     
     override func tearDown() {
