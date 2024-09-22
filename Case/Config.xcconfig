@@ -1,0 +1,15 @@
+//
+//  Config.xcconfig
+//  Case
+//
+//  Created by mba on 22.09.2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+IPHONEOS_DEPLOYMENT_TARGET = 14.0
+ENABLE_BITCODE = NO
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+CURRENT_PROJECT_VERSION = 3
+MARKETING_VERSION = 2.0
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
