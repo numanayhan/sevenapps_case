@@ -8,17 +8,12 @@ import Foundation
 import Alamofire
 
 class UserListVM {
-    
-    static let shared = UserListVM()
-    
-    private init() {}
-     
-    func fetchUserList(completion: @escaping (Result<[User], AFError>) -> Void) {
-        
-        NetworkManager.shared.request(
-            endpoint: Config.baseUrl,
-            method: .get
-        ) { (result: Result<[User], AFError>) in
+    private let userRepository: UserRepository
+    init(userRepository: UserRepository = UserRepositoryImpl()) {
+        self.userRepository = userRepository
+    } 
+    func fetchUserList(completion: @escaping (Result<[User], Error>) -> Void) {
+        userRepository.fetchUserList { result in
             completion(result)
         }
     }

@@ -15,6 +15,7 @@
 		2C09603C2CA0715900082ABB /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09603B2CA0715900082ABB /* UserDetail.swift */; };
 		2C09603F2CA0882400082ABB /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 2C09603E2CA0882400082ABB /* TinyConstraints */; };
 		2C0960412CA0888900082ABB /* UserLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960402CA0888900082ABB /* UserLabel.swift */; };
+		2C0960462CA095E600082ABB /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960452CA095E600082ABB /* UserRepositoryImpl.swift */; };
 		2C0F4A432CA02F050055BFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F4A422CA02F050055BFA4 /* AppDelegate.swift */; };
 		2C0F4A452CA02F050055BFA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F4A442CA02F050055BFA4 /* SceneDelegate.swift */; };
 		2C0F4A4C2CA02F080055BFA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F4A4B2CA02F080055BFA4 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		2C09603B2CA0715900082ABB /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		2C0960402CA0888900082ABB /* UserLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLabel.swift; sourceTree = "<group>"; };
 		2C0960432CA0927E00082ABB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		2C0960452CA095E600082ABB /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
 		2C0F4A3F2CA02F050055BFA4 /* Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0F4A422CA02F050055BFA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C0F4A442CA02F050055BFA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				2C0960342CA06D9700082ABB /* UserModels.swift */,
+				2C0960452CA095E600082ABB /* UserRepositoryImpl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				2C09603C2CA0715900082ABB /* UserDetail.swift in Sources */,
 				2C0F4A7E2CA032620055BFA4 /* NetworkConnection.swift in Sources */,
 				2C4CBDFA2CA04AA1003B7E2D /* StatusBarBanner.swift in Sources */,
+				2C0960462CA095E600082ABB /* UserRepositoryImpl.swift in Sources */,
 				2C0F4A432CA02F050055BFA4 /* AppDelegate.swift in Sources */,
 				2C0F4A842CA034D10055BFA4 /* UserList.swift in Sources */,
 				2C0F4A792CA0321F0055BFA4 /* Launch.swift in Sources */,

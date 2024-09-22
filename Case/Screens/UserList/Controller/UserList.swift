@@ -9,7 +9,7 @@ import UIKit
 import TinyConstraints
 
 class UserList: Base {
-    private let viewModel = UserListVM.shared
+    private let viewModel = UserListVM() 
     var searchUserName:String = ""
     private var users: [User] = []
     lazy var tableView: UITableView = {
