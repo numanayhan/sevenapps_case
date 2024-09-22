@@ -16,9 +16,17 @@ class UserListVMTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
+        // Mock repository'yi oluşturuyoruz
         mockRepository = MockUserRepository()
         
-        viewModel = UserListVM(userRepository: mockRepository! as! UserRepository) // Mock repository'yi inject ediyoruz
+        // guard ile mockRepository'nin nil olmadığını kontrol ediyoruz
+        guard let mockRepository = mockRepository else {
+            XCTFail("MockUserRepository could not be initialized")
+            return
+        }
+        
+         
     }
     
     override func tearDown() {
@@ -30,10 +38,11 @@ class UserListVMTests: XCTestCase {
     func testFetchUserListSuccess() {
         let expectation = XCTestExpectation(description: "Fetch user list successfully")
         
+        // Başarılı veri çekme testi
         viewModel.fetchUserList { result in
             switch result {
             case .success(let users):
-                XCTAssertEqual(users.count, 2)
+                XCTAssertEqual(users.count, 2) // 2 kullanıcı dönmeli
                 XCTAssertEqual(users[0].name, "John Doe")
                 XCTAssertEqual(users[1].email, "jane@example.com")
             case .failure:
@@ -48,16 +57,17 @@ class UserListVMTests: XCTestCase {
     func testFetchUserListFailure() {
         let expectation = XCTestExpectation(description: "Fetch user list failed")
         
-        // Mock repository'de hata döndürmek için shouldReturnError'ı true yapıyoruz
+        // Hata testi için mockRepository'de hata döndüreceğiz
         mockRepository.shouldReturnError = true
         
+        // Hata testi
         viewModel.fetchUserList { result in
             switch result {
             case .success:
                 XCTFail("Expected failure but got success")
             case .failure(let error):
-                XCTAssertEqual((error as NSError).code, 404)
-                XCTAssertEqual((error as NSError).localizedDescription, "Data not found")
+                XCTAssertEqual((error as NSError).code, 404) // Hata kodu 404 olmalı
+                XCTAssertEqual((error as NSError).localizedDescription, "Data not found") // Hata mesajı doğru olmalı
             }
             expectation.fulfill()
         }

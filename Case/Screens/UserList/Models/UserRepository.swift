@@ -5,8 +5,7 @@
 //  Created by mba on 22.09.2024.
 //
 
-import Foundation
-import Alamofire
+import Foundation 
 
 protocol UserRepository {
     func fetchUserList(completion: @escaping (Result<[User], Error>) -> Void)

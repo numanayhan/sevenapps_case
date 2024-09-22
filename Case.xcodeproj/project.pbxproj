@@ -18,11 +18,11 @@
 		2C0960462CA095E600082ABB /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960452CA095E600082ABB /* UserRepository.swift */; };
 		2C0960492CA0977800082ABB /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960482CA0977800082ABB /* MockUserRepository.swift */; };
 		2C09604C2CA0979700082ABB /* UserListVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09604B2CA0979700082ABB /* UserListVMTests.swift */; };
-		2C09604F2CA097E100082ABB /* UserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960342CA06D9700082ABB /* UserModels.swift */; };
 		2C0960522CA097F300082ABB /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F4A7D2CA032620055BFA4 /* NetworkConnection.swift */; };
 		2C0960542CA097F800082ABB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960372CA06E1100082ABB /* Config.swift */; };
-		2C0960552CA0983F00082ABB /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960452CA095E600082ABB /* UserRepository.swift */; };
 		2C0960572CA0984900082ABB /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960562CA0984900082ABB /* UserRepositoryImpl.swift */; };
+		2C09605A2CA0A2F400082ABB /* UserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960342CA06D9700082ABB /* UserModels.swift */; };
+		2C09605B2CA0A2F700082ABB /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960452CA095E600082ABB /* UserRepository.swift */; };
 		2C0F4A432CA02F050055BFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F4A422CA02F050055BFA4 /* AppDelegate.swift */; };
 		2C0F4A452CA02F050055BFA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F4A442CA02F050055BFA4 /* SceneDelegate.swift */; };
 		2C0F4A4C2CA02F080055BFA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F4A4B2CA02F080055BFA4 /* Assets.xcassets */; };
@@ -473,11 +473,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C09604C2CA0979700082ABB /* UserListVMTests.swift in Sources */,
-				2C09604F2CA097E100082ABB /* UserModels.swift in Sources */,
-				2C0960552CA0983F00082ABB /* UserRepository.swift in Sources */,
 				2C0960492CA0977800082ABB /* MockUserRepository.swift in Sources */,
 				2C0960522CA097F300082ABB /* NetworkConnection.swift in Sources */,
+				2C09605B2CA0A2F700082ABB /* UserRepository.swift in Sources */,
 				2C0960542CA097F800082ABB /* Config.swift in Sources */,
+				2C09605A2CA0A2F400082ABB /* UserModels.swift in Sources */,
 				2C0F4A5A2CA02F080055BFA4 /* CaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
