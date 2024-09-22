@@ -15,7 +15,14 @@
 		2C09603C2CA0715900082ABB /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09603B2CA0715900082ABB /* UserDetail.swift */; };
 		2C09603F2CA0882400082ABB /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 2C09603E2CA0882400082ABB /* TinyConstraints */; };
 		2C0960412CA0888900082ABB /* UserLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960402CA0888900082ABB /* UserLabel.swift */; };
-		2C0960462CA095E600082ABB /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960452CA095E600082ABB /* UserRepositoryImpl.swift */; };
+		2C0960462CA095E600082ABB /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960452CA095E600082ABB /* UserRepository.swift */; };
+		2C0960492CA0977800082ABB /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960482CA0977800082ABB /* MockUserRepository.swift */; };
+		2C09604C2CA0979700082ABB /* UserListVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09604B2CA0979700082ABB /* UserListVMTests.swift */; };
+		2C09604F2CA097E100082ABB /* UserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960342CA06D9700082ABB /* UserModels.swift */; };
+		2C0960522CA097F300082ABB /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F4A7D2CA032620055BFA4 /* NetworkConnection.swift */; };
+		2C0960542CA097F800082ABB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960372CA06E1100082ABB /* Config.swift */; };
+		2C0960552CA0983F00082ABB /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960452CA095E600082ABB /* UserRepository.swift */; };
+		2C0960572CA0984900082ABB /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0960562CA0984900082ABB /* UserRepositoryImpl.swift */; };
 		2C0F4A432CA02F050055BFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F4A422CA02F050055BFA4 /* AppDelegate.swift */; };
 		2C0F4A452CA02F050055BFA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F4A442CA02F050055BFA4 /* SceneDelegate.swift */; };
 		2C0F4A4C2CA02F080055BFA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F4A4B2CA02F080055BFA4 /* Assets.xcassets */; };
@@ -57,7 +64,10 @@
 		2C09603B2CA0715900082ABB /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		2C0960402CA0888900082ABB /* UserLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLabel.swift; sourceTree = "<group>"; };
 		2C0960432CA0927E00082ABB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		2C0960452CA095E600082ABB /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
+		2C0960452CA095E600082ABB /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		2C0960482CA0977800082ABB /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		2C09604B2CA0979700082ABB /* UserListVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVMTests.swift; sourceTree = "<group>"; };
+		2C0960562CA0984900082ABB /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
 		2C0F4A3F2CA02F050055BFA4 /* Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0F4A422CA02F050055BFA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C0F4A442CA02F050055BFA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,9 +151,26 @@
 			isa = PBXGroup;
 			children = (
 				2C0960342CA06D9700082ABB /* UserModels.swift */,
-				2C0960452CA095E600082ABB /* UserRepositoryImpl.swift */,
+				2C0960452CA095E600082ABB /* UserRepository.swift */,
+				2C0960562CA0984900082ABB /* UserRepositoryImpl.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2C0960472CA0976700082ABB /* UserRepos */ = {
+			isa = PBXGroup;
+			children = (
+				2C0960482CA0977800082ABB /* MockUserRepository.swift */,
+			);
+			path = UserRepos;
+			sourceTree = "<group>";
+		};
+		2C09604A2CA0978D00082ABB /* UserListVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C09604B2CA0979700082ABB /* UserListVMTests.swift */,
+			);
+			path = UserListVMTests;
 			sourceTree = "<group>";
 		};
 		2C0F4A362CA02F050055BFA4 = {
@@ -182,6 +209,8 @@
 		2C0F4A582CA02F080055BFA4 /* CaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				2C09604A2CA0978D00082ABB /* UserListVMTests */,
+				2C0960472CA0976700082ABB /* UserRepos */,
 				2C0F4A592CA02F080055BFA4 /* CaseTests.swift */,
 			);
 			path = CaseTests;
@@ -421,9 +450,10 @@
 			files = (
 				2C4CBDF82CA04A33003B7E2D /* NetworkManager.swift in Sources */,
 				2C09603C2CA0715900082ABB /* UserDetail.swift in Sources */,
+				2C0960572CA0984900082ABB /* UserRepositoryImpl.swift in Sources */,
 				2C0F4A7E2CA032620055BFA4 /* NetworkConnection.swift in Sources */,
 				2C4CBDFA2CA04AA1003B7E2D /* StatusBarBanner.swift in Sources */,
-				2C0960462CA095E600082ABB /* UserRepositoryImpl.swift in Sources */,
+				2C0960462CA095E600082ABB /* UserRepository.swift in Sources */,
 				2C0F4A432CA02F050055BFA4 /* AppDelegate.swift in Sources */,
 				2C0F4A842CA034D10055BFA4 /* UserList.swift in Sources */,
 				2C0F4A792CA0321F0055BFA4 /* Launch.swift in Sources */,
@@ -442,6 +472,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C09604C2CA0979700082ABB /* UserListVMTests.swift in Sources */,
+				2C09604F2CA097E100082ABB /* UserModels.swift in Sources */,
+				2C0960552CA0983F00082ABB /* UserRepository.swift in Sources */,
+				2C0960492CA0977800082ABB /* MockUserRepository.swift in Sources */,
+				2C0960522CA097F300082ABB /* NetworkConnection.swift in Sources */,
+				2C0960542CA097F800082ABB /* Config.swift in Sources */,
 				2C0F4A5A2CA02F080055BFA4 /* CaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
